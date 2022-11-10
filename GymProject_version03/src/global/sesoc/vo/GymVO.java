@@ -1,6 +1,6 @@
 package global.sesoc.vo;
 public class GymVO { //회원 클래스
-	private int usrid;
+	private String usrid; //primary key (유일한 값이어야하고 null이 아니어야 한다. -> unique, not null
 	private String usrname;
 	private double height;
 	private double weight;
@@ -11,7 +11,7 @@ public class GymVO { //회원 클래스
 	public GymVO() {}
 	
 	//오버로딩된 생성자
-	public GymVO(int usrid, String usrname, double height, double weight) {
+	public GymVO(String usrid, String usrname, double height, double weight) {
 		this.usrid = usrid;
 		this.usrname= usrname;
 		this.height = height;
@@ -31,7 +31,7 @@ public class GymVO { //회원 클래스
 		else  			   result = "저체중";
 	}
 	// setter, getter
-	public void setUsrid(int usrid) {
+	public void setUsrid(String usrid) {
 		this.usrid = usrid;
 	}
 	public void setUsrame(String usrname) {
@@ -46,7 +46,7 @@ public class GymVO { //회원 클래스
 		calcBMI();
 	}
 	// getter
-	public int getUsrid() {
+	public String getUsrid() {
 		return usrid;
 	}
 	public String getUsrname() {
